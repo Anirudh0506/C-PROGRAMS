@@ -40,3 +40,23 @@ Input
 2427
 Expected output
 Yes
+def no_of_digits(n):
+    count=0
+    while n!=0:
+        n//=10
+        count+=1
+    return count    
+n=int(input())
+tmp=n
+sum=0
+N=no_of_digits(n)
+while tmp!=0:
+    m=tmp%10
+    sum=sum+pow(m,N)
+    tmp//=10
+    N-=1
+if sum==n:
+    print("Yes")
+else:
+    print("No")
+    
