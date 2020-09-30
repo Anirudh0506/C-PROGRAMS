@@ -1,4 +1,4 @@
-#What are the Evens
+/*What are the Evens
 The Math Teacher of class 3 has taught the students the concept of even and odd numbers. 
 She now wants to test them and has written a long number N(containing 1-9 digits)
 on the board and has asked each student from the class to stand up,
@@ -52,7 +52,33 @@ Expected Output
 Input
 8896472
 Expected Output
-5 4 3 3 2 1 1
+5 4 3 3 2 1 1*/
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int n=s.size();
+    int a[n],i,j;
+    for(i=0;i<n;i++)
+    {
+        int count=0;
+        for(j=i;j<n;j++)
+        {
+            if((int)s[j]%2==0)
+            {
+                count++;
+            }
+        }
+        a[i]=count;
+    }
+    for(i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
 
 
 
